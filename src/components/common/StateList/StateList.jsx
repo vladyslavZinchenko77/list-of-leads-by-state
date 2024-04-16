@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, CardContent, Typography, Grid  } from '@mui/material'
+import { Card, CardContent, Typography, Grid } from '@mui/material'
 import ZoneList from '../ZoneList/ZoneList'
 const StateList = ({ states }) => {
   return (

@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Typography, List, ListItem, ListItemText  } from '@mui/material';
-import LeadList from '../LeadList/LeadList';
+import React from 'react'
+import { Typography, List, ListItem, ListItemText } from '@mui/material'
+import LeadList from '../LeadList/LeadList'
 
 const ZoneList = ({ zones }) => {
   return (
@@ -14,15 +13,13 @@ const ZoneList = ({ zones }) => {
           <ListItem key={zone.id}>
             <ListItemText
               primary={zone.name}
-              secondary={
-                <LeadList leads={zone.leads} />
-              }
+              secondary={<LeadList leads={zone.leads} />}
             />
           </ListItem>
         ))}
       </List>
     </>
-  );
-};
+  )
+}
 
-export default ZoneList;
+export default ZoneList
