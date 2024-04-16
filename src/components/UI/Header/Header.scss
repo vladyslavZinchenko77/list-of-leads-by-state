@@ -1,0 +1,28 @@
+.header{
+    padding: 12px;
+    margin: 24px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+   
+    .header__nav{
+        display: flex;
+       
+    }
+}
+
+
+.header__nav-link{
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    .header__nav-link--icon{
+        margin-right:8px ;
+    }
+    &:hover{
+        color: grey;
+    }
+}
