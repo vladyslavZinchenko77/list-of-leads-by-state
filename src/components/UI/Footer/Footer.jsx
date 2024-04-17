@@ -10,7 +10,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Test task
           </Typography>
           <Typography variant="subtitle1" align="center" component="p">
-            Made with ❤️ by <p>Vlad Zinchenko</p>
+            Made by <p>Vlad Zinchenko</p>
           </Typography>
         </Container>
       </Box>
