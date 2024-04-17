@@ -6,11 +6,12 @@ const LeadsProgressBar = ({ leads, totalLeads }) => {
 
   return (
     <Box display="flex" alignItems="center">
-      <Typography variant="body2" color="textSecondary">
+      <Typography variant="body2" color="textSecondary" style={{marginRight: 4}}>
         {leads}
       </Typography>
-      <Typography variant="body2" color="textSecondary">
-        /{`${totalLeads}`}
+      <Typography style={{marginRight: 4}}>/</Typography>
+      <Typography variant="body2" color="textSecondary" style={{marginRight: 20}}>
+       {`${totalLeads}`}
       </Typography>
       <Box
         minWidth={'80%'}

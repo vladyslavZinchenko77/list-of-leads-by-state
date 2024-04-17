@@ -36,10 +36,10 @@ const Leads = () => {
           Lead Management
         </Typography>
         <Grid container spacing={3} alignItems="center">
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <CreateState onAddState={handleAddState} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Box width="100%">
               <LeadsProgressBar leads={totalLeads} totalLeads={395} />
             </Box>

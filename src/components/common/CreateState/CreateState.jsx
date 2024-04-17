@@ -11,7 +11,7 @@ const CreateState = () => {
   }
   return (
     <>
-      <Typography>Create State</Typography>
+      <Typography style={{marginBottom: 24}}>Create State</Typography>
       <Box
         component="form"
         onSubmit={handleSubmit}
