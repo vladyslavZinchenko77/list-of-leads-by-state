@@ -1,36 +1,34 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+import { TextField, Button, Typography, Box } from '@mui/material';
 
-import { TextField, Button, Box, Typography } from '@mui/material'
-const CreateState = () => {
-  const [stateName, setStateName] = useState('')
+const CreateState = ({ onAddState }) => {
+  const [stateName, setStateName] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    onAddState({ name: stateName })
-    setStateName('')
-  }
+    e.preventDefault();
+    if (onAddState && stateName.trim() !== '') { 
+      onAddState({ name: stateName });
+      setStateName('');
+    }
+  };
+
   return (
-    <>
+    <form onSubmit={handleSubmit} style={{ display: 'flex', alignItems: 'center' }}>
       <Typography>Create State</Typography>
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        display="flex"
-        alignItems="center"
-      >
+      <Box flexGrow={1} mx={2}> 
         <TextField
           label="State Name"
           variant="outlined"
           value={stateName}
           onChange={(e) => setStateName(e.target.value)}
-          style={{ marginRight: '16px' }}
+          fullWidth
         />
-        <Button variant="contained" color="primary" type="submit">
-          Add State
-        </Button>
       </Box>
-    </>
-  )
-}
+      <Button variant="contained" color="primary" type="submit">
+        Add State
+      </Button>
+    </form>
+  );
+};
 
-export default CreateState
+export default CreateState;

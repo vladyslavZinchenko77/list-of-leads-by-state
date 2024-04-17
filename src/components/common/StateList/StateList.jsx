@@ -4,7 +4,7 @@ import { Card, CardContent, Typography, Grid } from '@mui/material'
 import ZoneList from '../ZoneList/ZoneList'
 const StateList = ({ states }) => {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} style={{marginTop: 24}}>
       {states.map((state) => (
         <Grid item xs={12} sm={6} md={4} key={state.id}>
           <Card>
